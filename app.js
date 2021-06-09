@@ -14,9 +14,8 @@ const todoArr = [
 ];
 
 function displayTodos(todos) {
-    todos = todoArr;
+    todos = [...todoArr];
     todos.forEach((todo) => displayTodo(todo));
-    console.log(todoArr);
 }
 
 function displayTodo(todo) {
@@ -30,6 +29,7 @@ function displayTodo(todo) {
               class="form-check-input"
               type="checkbox"
               id="check-task"
+              data-target="${todo.id}"
             />
             <label class="form-check-label" id="text" for="checkTodo"
               >${todo.text}</label
@@ -44,20 +44,15 @@ function displayTodo(todo) {
     ulElement.appendChild(liElement);
 }
 
-function deleteTodo(element, todoArr) {
+function deleteTodo(element) {
     if(element.classList.contains("delete")) {
         element.parentElement.parentElement.remove();
         showAlert("Deleted task!", "success");
     }
 }
 
-function checkAndUncheckTodo(element) {
-    if(element.id === "check-task") {
-        if(element.checked === true) {
-        } else {
-            console.log(false);
-        }
-    }
+function checkTodo(element) {
+    element.parentElement.parentElement.classList.toggle("text-muted");
 }
 
 function showAlert(message, className) {
@@ -98,5 +93,5 @@ document.querySelector(".list-group").addEventListener("click", (event) => {
 });
 
 document.querySelector(".list-group").addEventListener("click", (event) => {
-    checkAndUncheckTodo(event.target, todoArr);
-})
+    checkTodo(event.target);
+});
