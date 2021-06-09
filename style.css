@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .navbar {
+    background-color: royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    box-shadow: 0 0 30px #f1f1f1;
+} */
+
+.hero-image {
+    background-image: url("images/morning.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 40vh;
+    margin-bottom: 30px;
+}
+
+/* .select-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.select-section select {
+    padding: 10px 2rem;
+    
+} */
+
+/* .list-group {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
+.list-group .list-group-item {
+    padding: 20px 2rem;
+    background-color: #333;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item .list-actions {
+    cursor: pointer;
+} */
+
+/* .list-group-item .list-actions .icon {
+    padding-right: 10px;
+} */
+
+/* form {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}*/
+

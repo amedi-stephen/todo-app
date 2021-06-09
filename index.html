@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Todo App</title>
+  </head>
+  <body>
+    <!-- TODO: search for spicy colors  -->
+    <div class="navbar navbar-dark bg-primary">
+      <div class="container">
+        <h4 class="navbar-brand">Steve's List</h4>
+        <p>Dark/light mode</p>
+      </div>
+    </div>
+
+    <div class="hero-image">
+        <span id="greeting">Good Morning</span>
+        <span id="date">Jan 12, 2021</span>
+        <h4>What is your main focus today?</h4>
+      </div>
+
+    <div class="container mb-4" id="main">
+
+      <form class="container mb-4">
+        <input
+          type="text"
+          placeholder="Write something here..."
+          id="input-list"
+          class="form-control"
+        />
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      </form>
+
+      <div class="select-section container mb-4">
+        <select class="form-select" id="sort-list">
+          <option value="completed">Completed</option>
+          <option value="not completed">Not completed</option>
+          <option value="main focus">Main Focus</option>
+        </select>
+      </div>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+      <ul class="list-group">
+          <h4 class="text-white p-2">Tasks</h4>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
